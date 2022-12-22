@@ -15,12 +15,10 @@ html {
 }
 
 .text-center {
-    text-align: center!important;
+    text-align: center !important;
 }
 
-#main {
-
-}
+#main {}
 
 
 /* Header */
@@ -33,17 +31,19 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
     display: inline-block;
 }
 
-#nav, .subnav {
+#nav,
+.subnav {
     list-style-type: none;
 }
 
-#nav > li{
+#nav>li {
     display: inline-block;
 }
 
@@ -51,7 +51,7 @@ html {
     position: relative;
 }
 
-#nav > li > a {
+#nav>li>a {
     color: white;
     text-transform: uppercase;
 }
@@ -68,7 +68,7 @@ html {
 }
 
 #nav .subnav li:hover a,
-#nav > li:hover > a {
+#nav>li:hover>a {
     color: #000;
     background-color: #ccc;
 }
@@ -92,15 +92,33 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn {
+    float: right;
+    padding-top: 0;
+    padding-right: 21px;
+    padding-left: 0;
+}
+
 #header .search-btn {
     float: right;
+    padding: 0 21px;
 }
 
 #header .search-btn:hover {
-    background-color: #f44336!important;
+    background-color: #f44336 !important;
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+
+#header .menu-icon,
 #header .search-icon {
     color: white;
     font-size: 20px;
@@ -119,7 +137,7 @@ html {
 
 #slider .text-content {
     width: 100%;
-    position:absolute;
+    position: absolute;
     bottom: 47px;
     color: white;
     text-align: center;
@@ -138,15 +156,16 @@ html {
 
 /* Content */
 
-#content {
+#content {}
 
-}
-
-#content .content-section{
+#content .content-section {
+    max-width: 100%;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -182,7 +201,7 @@ html {
 }
 
 #content .member-item {
-  
+
     padding: 32px 0;
 
     text-align: center;
@@ -518,7 +537,7 @@ html {
 }
 
 .modal-footer .help {
-    color:blue;
+    color: blue;
     text-decoration: none;
 }
 
@@ -527,8 +546,17 @@ html {
         opacity: 0;
         transform: translateY(-140px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.pc {}
+
+.tablet {}
+
+.mobile {
+    font-size: 68px;
 }
